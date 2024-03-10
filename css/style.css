@@ -449,6 +449,9 @@ label {
 	font-family: 'Open Sans', sans-serif;
 	float: left;
 }
+#contact #message{
+	padding-top: 10px!important;
+}
 #contact .form-control {
 	display: block;
 	width: 100%;
@@ -578,9 +581,9 @@ color: #777;
   .opening-hours {
 	max-width: 600px;
 	padding: 3em;
-	color: #fff;
+	color: #000;
 	font-family: Neue Haas Grotesk Display Pro;
-	background-color: #1B0A29;
+	
   }
   
   .opening-hours_title {
@@ -598,3 +601,10 @@ color: #777;
 	list-style: none;
 	border-bottom: solid 1px #FFFFFF33;
   }
+
+  /*Social Media*/
+
+.fa{
+	margin-right: 7px!important;
+	font-size: x-large;
+}

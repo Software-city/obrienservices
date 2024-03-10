@@ -127,7 +127,7 @@ const showDay = document.getElementById(presentDay);
 const presentTime = presentDate.getHours();
 
 function checkDay() {
-    if (presentDay == 'Saturday' || presentDay == 'Sunday') {
+    if (presentDay == 'Sunday') {
         showDay.classList.add('closed');
     } else {
         if (presentTime >= 9 && presentTime < 17) {
