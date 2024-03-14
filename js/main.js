@@ -2,11 +2,12 @@
   'use strict';
 
   // Smooth scrolling functionality
-  $('a.page-scroll').click(function() {
+  $('a.page-scroll').click(function(event) {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
+        event.preventDefault(); // Prevent the default anchor click behavior
         $('html,body').animate({
           scrollTop: target.offset().top - 50
         }, 900);
@@ -127,25 +128,24 @@ const showDay = document.getElementById(presentDay);
 const presentTime = presentDate.getHours();
 
 function checkDay() {
-    if (presentDay == 'Sunday') {
-        showDay.classList.add('closed');
+  if (presentDay == 'Sunday') {
+    showDay.classList.add('closed');
+  } else {
+    if (presentTime >= 9 && presentTime < 17) {
+      showDay.classList.add('open');
     } else {
-        if (presentTime >= 9 && presentTime < 17) {
-            showDay.classList.add('open');
-        } else {
-            showDay.classList.add('closed');
-        }
+      showDay.classList.add('closed');
     }
+  }
 }
 checkDay();
 
-/* TEST */
+function showFacebookPage() {
+  document.getElementById('portfolio-items').style.display = 'none';
+  document.getElementById('facebookPage').style.display = 'flex';
+}
 
-// const presentDay = 'Saturday';
-// const presentTime = 16;
-
-// showDay.classList.add('color');
-// document.write(weekday[1]);
-// document.write(presentTime);
-// document.write(presentDay);
-// document.write(showDay);  
+function photo() {
+  document.getElementById('portfolio-items').style.display = 'block';
+  document.getElementById('facebookPage').style.display = 'none';
+}
