@@ -746,6 +746,34 @@ label {
 
 
 /* Media query for screen sizes 550px and below */
+@media (max-width: 768px) {
+    /* Owl Carousel navigation buttons */
+    .owl-nav .owl-prev, .owl-nav .owl-next {
+        width: 48px; /* Ensure at least 48x48px size */
+        height: 48px;
+        margin: 0 10px; /* Add some margin around for space */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .owl-nav i {
+        font-size: 24px; /* Adjust as needed */
+    }
+
+    /* Social media links */
+    .contact-item a {
+        display: inline-flex; /* Allows the centering of the icon */
+        justify-content: center;
+        align-items: center;
+        width: 48px; /* Minimum tap target size */
+        height: 48px;
+        margin: 5px; /* Ensure there's space around the targets */
+    }
+    .contact-item a i {
+        font-size: 24px; /* Adjust icon size as needed, but keep the a element size at least 48x48px */
+    }
+}
+
 @media only screen and (max-width: 550px) {
 
 	/* Styles specific to screen sizes 550px and below go here */
